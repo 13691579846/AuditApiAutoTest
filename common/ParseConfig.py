@@ -67,6 +67,8 @@ class ParseConfig(ConfigParser):
                               is_bool=is_bool)
 
 
+do_config = ParseConfig(CONFIG_PATH)
+
 if __name__ == '__main__':
     do_config = ParseConfig(CONFIG_PATH)
     print(do_config('Project', 'Name'))

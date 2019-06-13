@@ -70,10 +70,12 @@ class ParseExcel(object):
             raise TypeError('row and column must be type int')
 
 
+do_excel = ParseExcel(DATA_PATH)
+
 if __name__ == '__main__':
     do_excel = ParseExcel(DATA_PATH)
-    print(do_excel.excel_max_col('bindBankCard'))
-    print(do_excel.excel_min_row('bindBankCard'))
-    print(do_excel.head('bindBankCard'))
-    print(do_excel.get_all_values('bindBankCard'))
+    print(do_excel.excel_max_col('sendMCode'))
+    print(do_excel.excel_min_row('sendMCode'))
+    print(do_excel.head('sendMCode'))
+    print(do_excel.get_all_values('sendMCode'))
     do_excel.write_cell('sendMCode', 2, 8, 'test', color='red')

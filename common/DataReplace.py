@@ -12,7 +12,7 @@ import re
 
 class DataReplace(object):
     """正则表达式"""
-    pattern_phone = re.compile(r'\$\{phone\}')
+    pattern_unregistered_phone = re.compile(r'\$\{unregistered _phone\}')
 
     def __init__(self):
         pass
@@ -30,8 +30,8 @@ class DataReplace(object):
     @classmethod
     def replace_phone(cls, source):
         """替换数据"""
-        phone = '13691579846'
-        source = cls.replace(cls.pattern_phone, phone, source)
+        phone = '13691579877'
+        source = cls.replace(cls.pattern_unregistered_phone, phone, source)
         return source
 
     @classmethod
@@ -40,6 +40,8 @@ class DataReplace(object):
         source = cls.replace_phone(source)
         return source
 
+
+do_replace = DataReplace()
 
 if __name__ == '__main__':
     source_data = '{"mobilephone": ${phone}, "pwd": "123456"}'

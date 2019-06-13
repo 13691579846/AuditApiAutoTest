@@ -7,6 +7,7 @@
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
 """
+import json
 from suds.client import Client, WebFault
 
 
@@ -29,6 +30,14 @@ class WebService(object):
         :param data: 请求参数
         :return: 响应信息
         """
+        if isinstance(data, str):
+            try:
+                data = json.loads(data)
+            except Exception:
+                try:
+                    data = eval(data)
+                except Exception as e:
+                    raise e
         service = WebService.get_client_obj(url)
         my_api = getattr(service, api)
         try:
@@ -39,14 +48,18 @@ class WebService(object):
         else:
             return response
 
+    def __call__(self, url, api, data):
+        response = self.send_request(url=url, api=api, data=data)
+        return response
+
 
 if __name__ == '__main__':
-    # send_code_url = 'http://120.24.235.105:9010/sms-service-war-1.0/ws/smsFacade.ws?wsdl '
-    register_url = "http://120.24.235.105:9010/finance-user_info-war-1.0/ws/financeUserInfoFacade.ws?wsdl"
-    # send_parm = {"client_ip": "129.45.6.7", "tmpl_id": '1', "mobile": "13691579846"}
-    register_parm = {'verify_code': '639002', 'user_id': 'linuxchao',
-                     'channel_id': '1', 'pwd': '123456', 'mobile': '13691579846', 'ip': '129.45.6.7'}
+    send_code_url = 'http://120.24.235.105:9010/sms-service-war-1.0/ws/smsFacade.ws?wsdl '
+    send_parm = '{"client_ip": "sf", "tmpl_id": [1], "mobile": [13691579843]}'
+    # register_url = "http://120.24.235.105:9010/finance-user_info-war-1.0/ws/financeUserInfoFacade.ws?wsdl"
+    # register_parm = {'verify_code': '183357', 'user_id': 'linuxcha',
+    #                  'channel_id': '1', 'pwd': '123456', 'mobile': '13691579841', 'ip': '129.45.6.7'}
     web = WebService()
-    # result = web.send_request(send_code_url, 'sendMCode', send_parm)
-    result = web.send_request(register_url, 'userRegister', register_parm)
+    result = web(send_code_url, 'sendMCode', send_parm)
+    # result = web.send_request(register_url, 'userRegister', register_parm)
     print(result)
