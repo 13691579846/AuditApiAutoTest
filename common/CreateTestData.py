@@ -10,8 +10,11 @@
 import random
 import string
 
+from common.HandleMysql import HandleMysql
+
 
 class CreateData(object):
+
     @staticmethod
     def random_phone_num():
         """随机一个电话号码"""
@@ -26,7 +29,28 @@ class CreateData(object):
         phone_number = start + end + '846'
         return phone_number
 
+    @staticmethod
+    def is_exist_db(phone):
+        mysql = HandleMysql()
+        sql = 'SELECT Fmobile_no FROM sms_db_46.t_mvcode_info_8 where Fmobile_no=%s;'
+        exist = mysql(sql=sql, args=(phone,))
+        mysql.close()
+        if exist:
+            return True
+        else:
+            return False
+
+    @staticmethod
+    def get_unregistered_phone():
+        """获取未注册的手机号"""
+        while 1:
+            phone = CreateData.random_phone_num()
+            if not CreateData.is_exist_db(phone):
+                break
+        return phone
+
 
 if __name__ == '__main__':
     data = CreateData()
     print(data.random_phone_num())
+    print(data.get_unregistered_phone())

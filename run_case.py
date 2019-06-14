@@ -14,7 +14,6 @@ from config.config import (ENVIRONMENT, REPORT_DIR, CASE_DIR)
 from common.CreatePath import ModelsClass
 
 
-
 def tc_suite():
     """测试套件"""
     discover = unittest.defaultTestLoader.discover(CASE_DIR, 'test_*.py')
