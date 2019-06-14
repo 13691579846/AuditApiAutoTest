@@ -30,9 +30,12 @@ class DataReplace(object):
     @classmethod
     def replace_phone(cls, source):
         """替换数据"""
-        phone = '13691579877'
-        source = cls.replace(cls.pattern_unregistered_phone, phone, source)
-        return source
+        if hasattr(DataReplace, 'unregistered_phone'):
+            unregistered_phone = getattr(DataReplace, 'unregistered_phone')
+            source = cls.replace(cls.pattern_unregistered_phone, unregistered_phone, source)
+            return source
+        else:
+            raise AttributeError('{}没有{}属性'.format(DataReplace, 'unregistered_phone'))
 
     @classmethod
     def parameters_phone(cls, source):
@@ -40,8 +43,6 @@ class DataReplace(object):
         source = cls.replace_phone(source)
         return source
 
-
-do_replace = DataReplace()
 
 if __name__ == '__main__':
     source_data = '{"mobilephone": ${phone}, "pwd": "123456"}'

@@ -54,7 +54,7 @@ class WebService(object):
 
 
 if __name__ == '__main__':
-    send_code_url = 'http://120.24.235.105:9010/sms-service-war-1.0/ws/smsFacade.ws?wsdl '
+    send_code_url = 'http://120.24.235.105:9010/sms-service-war-1.0/ws/smsFacade.ws?wsdl'
     send_parm = '{"client_ip": "sf", "tmpl_id": [1], "mobile": [13691579843]}'
     # register_url = "http://120.24.235.105:9010/finance-user_info-war-1.0/ws/financeUserInfoFacade.ws?wsdl"
     # register_parm = {'verify_code': '183357', 'user_id': 'linuxcha',

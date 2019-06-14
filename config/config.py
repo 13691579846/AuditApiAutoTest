@@ -8,6 +8,7 @@
 ------------------------------------
 """
 import os
+import platform
 
 """
 All dirs of the project
@@ -19,11 +20,22 @@ COMMON_DIR = os.path.join(PROJECT_DIR, 'common')
 CONFIG_DIR = os.path.join(PROJECT_DIR, 'config')
 DATA_DIR = os.path.join(PROJECT_DIR, 'data')
 LIBS_DIR = os.path.join(PROJECT_DIR, 'libs')
+REPORT_DIR = os.path.join(PROJECT_DIR, 'report')
 """
 All files path of the project
 """
 CONFIG_PATH = os.path.join(CONFIG_DIR, 'config.ini')
 DATA_PATH = os.path.join(DATA_DIR, 'testcases.xlsx')
+"""
+Test environment info
+"""
+ENVIRONMENT = \
+    "Windows Version:" + \
+    platform.system() + \
+    platform.version() + \
+    platform.release() + \
+    "Python Version" + \
+    platform.python_build()[0]
 
 
 if __name__ == '__main__':

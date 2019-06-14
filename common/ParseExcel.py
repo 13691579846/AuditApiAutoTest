@@ -9,7 +9,7 @@
 """
 from openpyxl import load_workbook
 from openpyxl.styles import Font
-from openpyxl.styles.colors import BLACK, RED
+from openpyxl.styles.colors import (BLACK, RED, GREEN)
 from collections import namedtuple
 
 from config.config import DATA_PATH
@@ -20,7 +20,7 @@ class ParseExcel(object):
         self.filename = filename
         self.wb = load_workbook(self.filename)
         self.font = Font(color=None)
-        self.RGBDict = {'red': RED, 'black': BLACK}
+        self.RGBDict = {'red': RED, 'green': GREEN, 'black': BLACK}
 
     def excel_max_row(self, sheet_name):
         """get max row of sheet"""
