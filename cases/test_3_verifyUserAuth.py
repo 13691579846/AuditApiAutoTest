@@ -9,7 +9,6 @@
 """
 import unittest
 
-from base.base import Base
 from libs.ddt import (ddt, data)
 from common.ParseExcel import do_excel
 from common.ParseConfig import do_config
@@ -20,7 +19,7 @@ from common.HandleMysql import HandleMysql
 
 
 @ddt
-class TestVerifyUserAuth(Base):
+class TestVerifyUserAuth(unittest.TestCase):
     """实名认证接口"""
     values = do_excel.get_all_values('verifyUserAuth')
 

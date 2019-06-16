@@ -9,7 +9,6 @@
 """
 import unittest
 
-from base.base import Base
 from libs.ddt import (ddt, data)
 from common.ParseExcel import do_excel
 from common.ParseConfig import do_config
@@ -19,9 +18,13 @@ from common.HandleJson import HandleJson
 
 
 @ddt
-class TestSendCodeApi(Base):
+class TestSendCodeApi(unittest.TestCase):
     """发送短信验证码接口"""
     values = do_excel.get_all_values('sendMCode')
+
+    @classmethod
+    def setUpClass(cls):
+        print('开始执行[{}]测试用例'.format(cls.__doc__))
 
     @data(*values)
     def test_send_code(self, value):
@@ -44,6 +47,10 @@ class TestSendCodeApi(Base):
             raise e
         else:
             do_excel.write_cell(api_name, case_id+1, 9, 'Pass', color='green')
+
+    @classmethod
+    def tearDownClass(cls):
+        print('结束执行[{}]测试用例'.format(cls.__doc__))
 
 
 if __name__ == '__main__':
