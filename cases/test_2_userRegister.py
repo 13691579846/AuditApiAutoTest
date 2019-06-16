@@ -9,7 +9,6 @@
 """
 import unittest
 
-from base.base import Base
 from libs.ddt import (ddt, data)
 from common.ParseExcel import do_excel
 from common.ParseConfig import do_config

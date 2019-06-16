@@ -20,8 +20,9 @@ def tc_suite():
     return discover
 
 
+# TODO: Optimizing code
+# TODO: add log
 if __name__ == '__main__':
-
     report_dir = ModelsClass.create_dir(REPORT_DIR)
     report_file_name = ModelsClass.file_name('html')
     with open(report_dir + '/' + report_file_name, 'wb') as f:

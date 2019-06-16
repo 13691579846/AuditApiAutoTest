@@ -36,7 +36,6 @@ class ModelsClass(object):
     @staticmethod
     def create_dir(path):
         """创建HTML报告与日志文件存放目录"""
-        # report_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), path)
         if not os.path.exists(path):
             os.makedirs(path)
         return path

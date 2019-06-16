@@ -39,14 +39,14 @@ class TestSendCodeApi(unittest.TestCase):
         response = WebService.send_request(request_url, api_name, case_data)
         actual_dict = dict(response)
         actual_str = str(actual_dict)
-        do_excel.write_cell(api_name, case_id+1, 8, actual_str)
+        do_excel.write_cell("sendMCode", case_id+1, 8, actual_str)
         try:
             self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))
         except AssertionError as e:
-            do_excel.write_cell(api_name, case_id+1, 9, 'Fail', color='red')
+            do_excel.write_cell("sendMCode", case_id+1, 9, 'Fail', color='red')
             raise e
         else:
-            do_excel.write_cell(api_name, case_id+1, 9, 'Pass', color='green')
+            do_excel.write_cell("sendMCode", case_id+1, 9, 'Pass', color='green')
 
     @classmethod
     def tearDownClass(cls):

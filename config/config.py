@@ -21,6 +21,7 @@ CONFIG_DIR = os.path.join(PROJECT_DIR, 'config')
 DATA_DIR = os.path.join(PROJECT_DIR, 'data')
 LIBS_DIR = os.path.join(PROJECT_DIR, 'libs')
 REPORT_DIR = os.path.join(PROJECT_DIR, 'report')
+LOG_DIR = os.path.join(PROJECT_DIR, 'log')
 """
 All files path of the project
 """
