@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/6/13 9:00
 @Auth : linux超
-@File : test_sendCode.py
+@File : test_1_sendCode.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
@@ -19,7 +19,7 @@ from common.HandleJson import HandleJson
 
 
 @ddt
-class TestSendCode(Base):
+class TestSendCodeApi(Base):
     """发送短信验证码接口"""
     values = do_excel.get_all_values('sendMCode')
 
