@@ -64,5 +64,5 @@ class HandleMysql(object):
 if __name__ == '__main__':
     do_config = ParseConfig(CONFIG_PATH)
     mysql = HandleMysql()
-    print(mysql('select * from sms_db_46.t_mvcode_info_8'))
+    print(mysql('select * from sms_db_46.t_mvcode_info_8;'))
     mysql.close()
