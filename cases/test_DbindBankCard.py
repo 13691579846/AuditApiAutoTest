@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/6/16 12:20
 @Auth : linux超
-@File : test_4_bindBankCard.py
+@File : test_DbindBankCard.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
@@ -17,6 +17,7 @@ from common.DataReplace import DataReplace
 from common.HandleJson import HandleJson
 from common.HandleMysql import HandleMysql
 from common.CreateTestData import CreateData
+from common.RecordLog import logger
 
 
 @ddt
@@ -26,7 +27,7 @@ class TestBindBankCard(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print('开始执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---开始加载[{}]测试用例---'.format(cls.__doc__))
         cls.mysql = HandleMysql()
         # 执行认证接口之前先删除表中已经认证的身份证号
         cls.mysql(sql='delete FROM user_db.t_user_auth_info where Ftrue_name = "张亮";')
@@ -48,6 +49,7 @@ class TestBindBankCard(unittest.TestCase):
         request_url = do_config("Project", "Url") + case_url
         sql = value.Sql
         case_data = DataReplace.parameters_bind_bank_card_api(case_data)
+        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         if sql and api_name == "sendMCode":
             code_sql = DataReplace.parameters_bind_bank_card_api(sql)
@@ -70,10 +72,13 @@ class TestBindBankCard(unittest.TestCase):
             raise e
         else:
             do_excel.write_cell("bindBankCard", case_id+1, 9, 'Pass', color='green')
+        finally:
+            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
 
     @classmethod
     def tearDownClass(cls):
         cls.mysql.close()
+        logger.info('---结束加载[{}]测试用例---'.format(cls.__doc__))
 
 
 if __name__ == '__main__':

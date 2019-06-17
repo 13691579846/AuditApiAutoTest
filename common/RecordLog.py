@@ -9,6 +9,8 @@
 """
 import logging
 from logging.handlers import RotatingFileHandler
+from common.CreatePath import ModelsClass
+from config.config import LOG_DIR
 
 
 class Log(object):
@@ -52,6 +54,10 @@ class Log(object):
         self.__close_handler(file_handler)
         return self.__logger
 
+
+log_name = ModelsClass.file_name('log')
+log = Log(__name__, LOG_DIR + '/' + log_name)
+logger = log.logger
 
 if __name__ == '__main__':
     log = Log(__name__, 'file.log')

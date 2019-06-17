@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/6/13 9:00
 @Auth : linux超
-@File : test_1_sendCode.py
+@File : test_AsendCode.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
@@ -15,6 +15,7 @@ from common.ParseConfig import do_config
 from common.WebService import WebService
 from common.DataReplace import DataReplace
 from common.HandleJson import HandleJson
+from common.RecordLog import logger
 
 
 @ddt
@@ -24,7 +25,7 @@ class TestSendCodeApi(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print('开始执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---开始加载[{}]测试用例---'.format(cls.__doc__))
 
     @data(*values)
     def test_send_code(self, value):
@@ -36,6 +37,7 @@ class TestSendCodeApi(unittest.TestCase):
         case_expected = HandleJson.json_to_dict(value.Expected)
         request_url = do_config("Project", "Url") + case_url
         case_data = DataReplace.parameters_verify_code_api(case_data)
+        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         actual_dict = dict(response)
         actual_str = str(actual_dict)
@@ -47,10 +49,12 @@ class TestSendCodeApi(unittest.TestCase):
             raise e
         else:
             do_excel.write_cell("sendMCode", case_id+1, 9, 'Pass', color='green')
+        finally:
+            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
 
     @classmethod
     def tearDownClass(cls):
-        print('结束执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---结束加载[{}]测试用例---'.format(cls.__doc__))
 
 
 if __name__ == '__main__':

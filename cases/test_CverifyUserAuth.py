@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/6/15 19:58
 @Auth : linux超
-@File : test_3_verifyUserAuth.py
+@File : test_CverifyUserAuth.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
@@ -17,6 +17,7 @@ from common.DataReplace import DataReplace
 from common.HandleJson import HandleJson
 from common.HandleMysql import HandleMysql
 from common.CreateTestData import CreateData
+from common.RecordLog import logger
 
 
 @ddt
@@ -26,7 +27,7 @@ class TestVerifyUserAuth(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print('开始执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---开始加载[{}]测试用例---'.format(cls.__doc__))
         cls.mysql = HandleMysql()
         # 执行认证接口之前先删除表中已经认证的身份证号
         cls.mysql(sql='delete FROM user_db.t_user_auth_info where Ftrue_name in ("超哥", "张亮");')
@@ -44,6 +45,7 @@ class TestVerifyUserAuth(unittest.TestCase):
         case_expected = HandleJson.json_to_dict(value.Expected)
         request_url = do_config("Project", "Url") + case_url
         case_data = DataReplace.parameters_verify_user_auth_api(case_data)
+        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         actual_dict = dict(response)
         if sql and api_name == "sendMCode":
@@ -77,11 +79,13 @@ class TestVerifyUserAuth(unittest.TestCase):
             raise e
         else:
             do_excel.write_cell("verifyUserAuth", case_id+1, 9, 'Pass', color='green')
+        finally:
+            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
 
     @classmethod
     def tearDownClass(cls):
         cls.mysql.close()
-        print('结束执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---结束加载[{}]测试用例---'.format(cls.__doc__))
 
 
 if __name__ == '__main__':

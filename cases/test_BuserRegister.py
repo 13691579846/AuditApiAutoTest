@@ -2,7 +2,7 @@
 ------------------------------------
 @Time : 2019/6/14 20:11
 @Auth : linux超
-@File : test_2_userRegister.py
+@File : test_BuserRegister.py
 @IDE  : PyCharm
 @Motto: Real warriors,dare to face the bleak warning,dare to face the incisive error!
 ------------------------------------
@@ -17,6 +17,7 @@ from common.DataReplace import DataReplace
 from common.HandleJson import HandleJson
 from common.CreateTestData import CreateData
 from common.HandleMysql import HandleMysql
+from common.RecordLog import logger
 
 
 @ddt
@@ -26,7 +27,7 @@ class TestUserRegisterApi(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print('开始执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---开始加载[{}]测试用例---'.format(cls.__doc__))
         cls.mysql = HandleMysql()
         cls.verify_unregistered_phone = CreateData.get_unregistered_phone()
         setattr(DataReplace, 'verify_unregistered_phone', cls.verify_unregistered_phone)
@@ -42,6 +43,7 @@ class TestUserRegisterApi(unittest.TestCase):
         sql = value.Sql
         request_url = do_config("Project", "Url") + case_url  # 请求地址
         case_data = DataReplace.parameters_register_api(case_data)
+        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         if sql and api_name == 'sendMCode':
             sql = DataReplace.parameters_register_api(sql)
@@ -68,11 +70,13 @@ class TestUserRegisterApi(unittest.TestCase):
             raise e
         else:
             do_excel.write_cell('userRegister', case_id+1, 9, 'Pass', color='green')
+        finally:
+            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
 
     @classmethod
     def tearDownClass(cls):
         cls.mysql.close()
-        print('结束执行[{}]测试用例'.format(cls.__doc__))
+        logger.info('---结束加载[{}]测试用例---'.format(cls.__doc__))
 
 
 if __name__ == '__main__':
