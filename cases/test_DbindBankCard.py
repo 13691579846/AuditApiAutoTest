@@ -38,6 +38,9 @@ class TestBindBankCard(unittest.TestCase):
             str(cls.mysql('SELECT Fuid FROM user_db.t_user_info where Ftrue_name is Null limit 1;')["Fuid"])
         setattr(DataReplace, "untrue_register_uid", untrue_register_uid)
 
+    def setUp(self):
+        logger.info('*开始执行[{}]测试用例*'.format(self.id()))
+
     @data(*values)
     def test_bind_bank_card(self, value):
         case_id = value.CaseId
@@ -49,7 +52,6 @@ class TestBindBankCard(unittest.TestCase):
         request_url = do_config("Project", "Url") + case_url
         sql = value.Sql
         case_data = DataReplace.parameters_bind_bank_card_api(case_data)
-        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         if sql and api_name == "sendMCode":
             code_sql = DataReplace.parameters_bind_bank_card_api(sql)
@@ -64,16 +66,20 @@ class TestBindBankCard(unittest.TestCase):
             setattr(DataReplace, "trued_uid", trued_uid)
         actual_dict = dict(response)
         actual_str = str(actual_dict)
-        do_excel.write_cell("bindBankCard", case_id+1, 8, actual_str)
         try:
+            logger.info("测试用例执行实际结果为:[{}]".format(actual_str))
+            do_excel.write_cell("bindBankCard", case_id + 1, 8, actual_str)
             self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))
         except AssertionError as e:
             do_excel.write_cell("bindBankCard", case_id+1, 9, 'Fail', color='red')
+            logger.error("测试用例[{}]执行结果:{}\n具体原因信息:{}".format(case_title, "Fail", e))
             raise e
         else:
             do_excel.write_cell("bindBankCard", case_id+1, 9, 'Pass', color='green')
-        finally:
-            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
+            logger.error("测试用例[{}]执行结果:{}".format(case_title, "Pass"))
+
+    def tearDown(self):
+        logger.info('*结束执行[{}]测试用例*'.format(self.id()))
 
     @classmethod
     def tearDownClass(cls):

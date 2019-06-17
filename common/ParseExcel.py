@@ -13,6 +13,7 @@ from openpyxl.styles.colors import (BLACK, RED, GREEN)
 from collections import namedtuple
 
 from config.config import DATA_PATH
+from common.RecordLog import logger
 
 
 class ParseExcel(object):
@@ -64,9 +65,12 @@ class ParseExcel(object):
                 cell_obj.font = Font(color=self.RGBDict[color], bold=True)
                 cell_obj.value = value
                 self.wb.save(self.filename)
+                logger.info("Excel文件[{}]表单[{}]写入数据[{}]".format(self.filename, sheet_name, value))
             except Exception as e:
+                logger.error("Excel文件[{}]表单[{}]写入数据错误\n错误信息:{}".format(self.filename, sheet_name, e))
                 raise e
         else:
+            logger.error("Excel文件写入数据错误\n错误信息:{}".format('row and column must be type int'))
             raise TypeError('row and column must be type int')
 
 

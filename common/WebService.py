@@ -9,6 +9,7 @@
 """
 import json
 from suds.client import Client, WebFault
+from common.RecordLog import logger
 
 
 class WebService(object):
@@ -32,19 +33,25 @@ class WebService(object):
         if isinstance(data, str):
             try:
                 data = json.loads(data)
+                logger.info('获得请求参数<{}>'.format(data))
             except Exception:
                 try:
                     data = eval(data)
+                    logger.info('获得请求参数<{}>'.format(data))
                 except Exception as e:
+                    logger.error("获得请求参数失败\n错误详情:{}".format(e))
                     raise e
         service = WebService.get_client_obj(url)
         my_api = getattr(service, api)
         try:
+            logger.info("开始发送[{}]请求".format(api))
             response = my_api(data)
         except WebFault as e:
             response = e.fault
+            logger.info("返回[{}]接口响应信息为:\n{}".format(api, response))
             return response
         else:
+            logger.info("返回[{}]接口响应信息为:\n{}".format(api, response))
             return response
 
     def __call__(self, url, api, data):

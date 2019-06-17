@@ -9,9 +9,12 @@
 """
 import re
 from common.CreateTestData import CreateData
+from common.RecordLog import logger
 
 
 class DataReplace(object):
+
+    logger.info("<---开始参数化测试数据--->")
     """正则表达式"""
     pattern_unregistered_phone = re.compile(r'\$\{verify_phone\}')
     pattern_verify_unregistered_phone = re.compile(r'\$\{verify_unregistered_phone\}')
@@ -117,6 +120,7 @@ class DataReplace(object):
     def parameters_verify_code_api(cls, source):
         """参数化发送验证码接口"""
         source = cls.replace_verify_phone(source)
+        logger.info('获得参数化后的测试数据<{}>'.format(source))
         return source
 
     @classmethod

@@ -34,6 +34,9 @@ class TestVerifyUserAuth(unittest.TestCase):
         cls.verify_unregistered_phone = CreateData.get_unregistered_phone()
         setattr(DataReplace, 'verify_unregistered_phone', cls.verify_unregistered_phone)
 
+    def setUp(self):
+        logger.info('*开始执行[{}]测试用例*'.format(self.id()))
+
     @data(*values)
     def test_verify_user_auth(self, value):
         case_id = value.CaseId
@@ -45,7 +48,6 @@ class TestVerifyUserAuth(unittest.TestCase):
         case_expected = HandleJson.json_to_dict(value.Expected)
         request_url = do_config("Project", "Url") + case_url
         case_data = DataReplace.parameters_verify_user_auth_api(case_data)
-        logger.info('---开始执行第{}条-[{}]测试用例---'.format(case_id, case_title))
         response = WebService.send_request(request_url, api_name, case_data)
         actual_dict = dict(response)
         if sql and api_name == "sendMCode":
@@ -71,16 +73,20 @@ class TestVerifyUserAuth(unittest.TestCase):
             else:
                 actual_dict["Flstate"] = "无效"
         actual_str = str(actual_dict)
-        do_excel.write_cell("verifyUserAuth", case_id+1, 8, actual_str)
         try:
+            logger.info("测试用例执行实际结果为:[{}]".format(actual_str))
+            do_excel.write_cell("verifyUserAuth", case_id + 1, 8, actual_str)
             self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))
         except AssertionError as e:
             do_excel.write_cell("verifyUserAuth", case_id+1, 9, 'Fail', color='red')
+            logger.error("测试用例[{}]执行结果:{}\n具体原因信息:{}".format(case_title, "Fail", e))
             raise e
         else:
             do_excel.write_cell("verifyUserAuth", case_id+1, 9, 'Pass', color='green')
-        finally:
-            logger.info('---执行第{}条-[{}]测试用例结束---'.format(case_id, case_title))
+            logger.error("测试用例[{}]执行结果:{}".format(case_title, "Pass"))
+
+    def tearDown(self):
+        logger.info('*结束执行[{}]测试用例*'.format(self.id()))
 
     @classmethod
     def tearDownClass(cls):

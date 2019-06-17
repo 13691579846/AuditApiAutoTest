@@ -1,0 +1,3730 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='description' content=''/>
+    <meta name='robots' content='noodp, noydir'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet'/>
+
+    <title>接口自动化测试报告 - TestReport</title>
+    
+    <style type="text/css">
+        .node.level-1 ul {
+            display: none;
+        }
+
+        .node.level-1.active ul {
+            display: block;
+        }
+
+        .card-panel.environment th:first-child {
+            width: 30%;
+        }
+        .small_img{
+            height: 180px; 
+            width: 100px; 
+            padding: 10px;
+            float: left;
+            background-repeat: no-repeat; 
+            background-position: center center; 
+            background-size: cover; 
+          } 
+        .black_overlay{ 
+            display: none; 
+            position: absolute; 
+            top: 0%; 
+            left: 0%; 
+            width: 100%; 
+            height: 100%; 
+            background-color: white; 
+            z-index:1001; 
+            -moz-opacity: 0.8; 
+            opacity:.80; 
+            filter: alpha(opacity=80);  
+        } 
+        .big_img { 
+            cursor: pointer;
+            display: none; 
+            position: absolute; 
+            height: 650px;
+            left:50%; 
+            top: 50%;
+            margin: -300px 0px 0px -200px;
+            z-index:1002; 
+            overflow: auto; 
+        }
+    </style>
+
+    
+</head>
+
+<body class='extent standard default hide-overflow dark'>
+<div id='theme-selector' alt='切换主题，默认黑色' title='切换主题'>
+    <span><i class='material-icons'>desktop_windows</i></span>
+</div>
+
+    <nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+        <!-- slideout menu -->
+        <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+            <li class='waves-effect active'><a href='#!' view='test-view'
+                                               onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a>
+            </li>
+            <!-- <li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i
+                    class='material-icons'>label_outline</i></a></li>
+            <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');"
+                                        view='dashboard-view'><i class='material-icons'>track_changes</i></a></li> -->
+        </ul>
+
+        <!-- report name -->
+        <span class='report-name'>Test Report: 接口自动化测试报告</span>
+
+        <!-- report headline -->
+        <span class='report-headline'></span>
+
+        <!-- nav-right -->
+        <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+            <li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Start_time: 2019-06-17 22:42:12</span>
+                </a>
+            </li>
+            <li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>Duration: 0:00:30.017717 </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    
+
+<div class='container'>
+    
+    <div id='test-view' class='view'>
+
+        
+    <section id='controls'>
+            <div class='controls grey lighten-4'>
+                <!-- test toggle -->
+                <div class='chip transparent'>
+                    <a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true'
+                       data-beloworigin='true' data-hover='true' href='#'>
+                        <i class='material-icons'>warning</i> Status
+                    </a>
+                    <ul id='tests-toggle' class='dropdown-content'>
+                        <li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a>
+                        </li>
+                        <li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+                        <li status="skip"><a href="#!">Skip <i class="material-icons cyan-text">redo</i></a></li>
+                        <li class='divider'></li>
+                        <li status='clear' clear='true'><a href='#!'>Clear Filters <i
+                                class='material-icons'>clear</i></a></li>
+                    </ul>
+                </div>
+                <!-- test toggle -->
+
+                <!-- category toggle -->
+                <div class='chip transparent'>
+                    <a class='dropdown-button category-toggle' data-activates='category-toggle'
+                       data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+                        <i class='material-icons'>local_offer</i> Category
+                    </a>
+                    <ul id='category-toggle' class='dropdown-content'>
+                        
+    <li><a href='#'>test_AsendCode.TestSendCodeApi</a></li>
+    
+    <li><a href='#'>test_BuserRegister.TestUserRegisterApi</a></li>
+    
+    <li><a href='#'>test_CverifyUserAuth.TestVerifyUserAuth</a></li>
+    
+    <li><a href='#'>test_DbindBankCard.TestBindBankCard</a></li>
+    
+                        <li class='divider'></li>
+                        <li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+                    </ul>
+                </div>
+                <!-- category toggle -->
+
+                <!-- clear filters -->
+                <div class='chip transparent hide'>
+                    <a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+                        <i class='material-icons'>close</i> Clear
+                    </a>
+                </div>
+                <!-- clear filters -->
+
+                <!-- enable dashboard -->
+                <div id='toggle-test-view-charts' class='chip transparent'>
+                    <a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+                        <i class='material-icons'>track_changes</i> Dashboard
+                    </a>
+                </div>
+                <!-- enable dashboard -->
+
+                <!-- search -->
+                <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                    <a href="#" class='search-div'>
+                        <i class='material-icons'>search</i> Search
+                    </a>
+
+                    <div class='input-field left hide'>
+                        <input style="color: red" id='search-tests' type='text' class='validate browser-default'
+                               placeholder='Search Tests...'>
+                    </div>
+
+                </div>
+                <!-- search -->
+            </div>
+        </section>
+    
+
+        
+    <div id='test-view-charts' class='subview-full'>
+
+            <div id='test-view-charts' class='subview-full'>
+                <div id='charts-row' class='row nm-v nm-h'>
+                    <div class='col s12 m6 l6 np-h'>
+                        <div class='card-panel nm-v'>
+                            <div class='left panel-name'>Tests</div>
+                            <div class='chart-box'>
+                                <canvas id='parent-analysis' width='100' height='80'></canvas>
+                            </div>
+                            <div class='block text-small'>
+                            <span class='tooltipped' data-position='top'><span
+                                    class='strong'>66</span> test(s) passed</span>
+                                <span class='tooltipped' data-position='top'><span
+                                        class='strong'>8</span> test(s) failed</span>
+                            </div>
+                            <div class='block text-small'>
+                            <span class='strong tooltipped' data-position='top'
+                            >0</span>
+                                test(s) errored
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='col s12 m6 l6 np-h'>
+                        <div class='card-panel nm-v'>
+                            <div class='left panel-name'>Suites</div>
+                            <div class='chart-box'>
+                                <canvas id='child-analysis' width='100' height='80'></canvas>
+                            </div>
+                            <div class='block text-small'>
+                            <span id="pass_suites" class='tooltipped' data-position='top'>
+                            </span>
+                            </div>
+                            <div class='block text-small'>
+                                <span id="fail_suites" class='strong tooltipped' data-position='top'></span> suite(s)
+                                failed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    <div class='subview-left left'>
+
+            <div class='view-summary'>
+                <h5>Suites</h5>
+                <ul id='test-collection' class='test-collection'>
+                
+    <li class="test displayed active has-leaf fail" status="fail" bdd="false" test-id="test_AsendCode.TestSendCodeApi_1">
+    <div class='test-heading'>
+        <span class='test-name'>test_AsendCode.TestSendCodeApi</span>
+        <span class='test-time'>desc: 发送短信验证码接口 </span>
+        <span class="test-status right fail">fail</span>
+    </div>
+    <div class='test-content hide'>
+        <div class='test-desc'>Pass: 10 ;
+                                Fail: 2 ;
+                                Error: 0 ;
+        </div>
+        <div class='test-attributes'>
+            <div class='category-list'>
+                <span class='category label white-text'>test_AsendCode.TestSendCodeApi</span>
+            </div>
+        </div>
+        <ul class='collapsible node-list' data-collapsible='accordion'>
+            
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_01_发送成功_所有参数正确_pt1.1_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_01_发送成功_所有参数正确</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_01_发送成功_所有参数正确</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_02_发送成功_IP地址非String类型_pt1.2_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_02_发送成功_IP地址非String类型</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_02_发送成功_IP地址非String类型</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_03_发送失败_IP地址为空_pt1.3_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_03_发送失败_IP地址为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_03_发送失败_IP地址为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02B06890><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_04_发送失败_IP地址参数缺失_pt1.4_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_04_发送失败_IP地址参数缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_04_发送失败_IP地址参数缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02A17EB0><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_05_发送失败_短信模板参数缺失_pt1.5_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_05_发送失败_短信模板参数缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_05_发送失败_短信模板参数缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02A176D0><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_06_发送失败_手机号码参数缺失_pt1.6_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_06_发送失败_手机号码参数缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_06_发送失败_手机号码参数缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02A7A790><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_07_发送失败_手机号码为空_pt1.7_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_07_发送失败_手机号码为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_07_发送失败_手机号码为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02A175D0><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_08_发送失败_手机号码非11位_pt1.8_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_08_发送失败_手机号码非11位</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_08_发送失败_手机号码非11位</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02A645F0><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_09_发送失败_短信模板为空_pt1.9_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_09_发送失败_短信模板为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_09_发送失败_短信模板为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02AB94D0><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_send_code_10_发送失败_短信模板不为1_pt1.10_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_10_发送失败_短信模板不为1</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_10_发送失败_短信模板不为1</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: <suds.sax.document.Document object at 0x02B21390><br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_send_code_11_发送成功_短信模板非String类型_ft1.11_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_11_发送成功_短信模板非String类型</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_11_发送成功_短信模板非String类型</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_AsendCode.py", line 53, in test_send_code<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_AsendCode.py", line 49, in test_send_code<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'faultcode': 'soap:Server', 'faultstring': '短信模板配置错误'} != {'retCode': 0, 'retInfo': ok}<br />- {'faultcode': 'soap:Server', 'faultstring': '短信模板配置错误'}<br />+ {'retCode': 0, 'retInfo': ok} : 用例[发送成功-短信模板非String类型]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_send_code_12_发送失败_手机号码非String类型_ft1.12_1">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_send_code_12_发送失败_手机号码非String类型</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_send_code_12_发送失败_手机号码非String类型</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+0: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_AsendCode.py", line 53, in test_send_code<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_AsendCode.py", line 49, in test_send_code<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'faultcode': 'soap:Server', 'faultstring': '手机号码错误'} != {'retCode': 0, 'retInfo': ok}<br />- {'faultcode': 'soap:Server', 'faultstring': '手机号码错误'}<br />+ {'retCode': 0, 'retInfo': ok} : 用例[发送失败-手机号码非String类型]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+        </ul>
+    </div>
+    
+    <li class="test displayed active has-leaf pass" status="pass" bdd="true" test-id="test_BuserRegister.TestUserRegisterApi_2">
+    <div class='test-heading'>
+        <span class='test-name'>test_BuserRegister.TestUserRegisterApi</span>
+        <span class='test-time'>desc: 用户注册接口 </span>
+        <span class="test-status right pass">pass</span>
+    </div>
+    <div class='test-content hide'>
+        <div class='test-desc'>Pass: 17 ;
+                                Fail: 0 ;
+                                Error: 0 ;
+        </div>
+        <div class='test-attributes'>
+            <div class='category-list'>
+                <span class='category label white-text'>test_BuserRegister.TestUserRegisterApi</span>
+            </div>
+        </div>
+        <ul class='collapsible node-list' data-collapsible='accordion'>
+            
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_01_获取验证码_pt2.1_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_01_获取验证码</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_01_获取验证码</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_02_注册失败_验证码缺失_pt2.2_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_02_注册失败_验证码缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_02_注册失败_验证码缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_03_注册失败_用户名缺失_pt2.3_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_03_注册失败_用户名缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_03_注册失败_用户名缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_04_注册失败_注册渠道缺失_pt2.4_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_04_注册失败_注册渠道缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_04_注册失败_注册渠道缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_05_注册失败_密码缺失_pt2.5_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_05_注册失败_密码缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_05_注册失败_密码缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_06_注册失败_手机号缺失_pt2.6_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_06_注册失败_手机号缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_06_注册失败_手机号缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_07_注册失败_IP地址缺失_pt2.7_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_07_注册失败_IP地址缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_07_注册失败_IP地址缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_08_注册失败_验证码为空_pt2.8_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_08_注册失败_验证码为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_08_注册失败_验证码为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_09_注册失败_用户名为空_pt2.9_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_09_注册失败_用户名为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_09_注册失败_用户名为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_10_注册失败_注册渠道为空_pt2.10_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_10_注册失败_注册渠道为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_10_注册失败_注册渠道为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_11_注册失败_登录密码为空_pt2.11_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_11_注册失败_登录密码为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_11_注册失败_登录密码为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_12_注册失败_手机号码为空_pt2.12_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_12_注册失败_手机号码为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_12_注册失败_手机号码为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_13_注册失败_验证码错误_pt2.13_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_13_注册失败_验证码错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_13_注册失败_验证码错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_14_注册失败_注册渠道非_1_2_3__pt2.14_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_14_注册失败_注册渠道非_1_2_3_</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_14_注册失败_注册渠道非_1_2_3_</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_15_注册失败_手机号码错误_pt2.15_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_15_注册失败_手机号码错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_15_注册失败_手机号码错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_16_注册成功_所有参数正确_pt2.16_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_16_注册成功_所有参数正确</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_16_注册成功_所有参数正确</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_user_register_17_注册失败_手机号码已经被注册_pt2.17_2">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_user_register_17_注册失败_手机号码已经被注册</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_user_register_17_注册失败_手机号码已经被注册</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+1: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+        </ul>
+    </div>
+    
+    <li class="test displayed active has-leaf fail" status="fail" bdd="false" test-id="test_CverifyUserAuth.TestVerifyUserAuth_3">
+    <div class='test-heading'>
+        <span class='test-name'>test_CverifyUserAuth.TestVerifyUserAuth</span>
+        <span class='test-time'>desc: 实名认证接口 </span>
+        <span class="test-status right fail">fail</span>
+    </div>
+    <div class='test-content hide'>
+        <div class='test-desc'>Pass: 16 ;
+                                Fail: 1 ;
+                                Error: 0 ;
+        </div>
+        <div class='test-attributes'>
+            <div class='category-list'>
+                <span class='category label white-text'>test_CverifyUserAuth.TestVerifyUserAuth</span>
+            </div>
+        </div>
+        <ul class='collapsible node-list' data-collapsible='accordion'>
+            
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_01_获取验证码_pt3.1_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_01_获取验证码</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_01_获取验证码</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_02_帐号注册_pt3.2_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_02_帐号注册</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_02_帐号注册</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_03_认证失败_uid参数缺失_pt3.3_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_03_认证失败_uid参数缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_03_认证失败_uid参数缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_04_认证失败_真实姓名缺失_pt3.4_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_04_认证失败_真实姓名缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_04_认证失败_真实姓名缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_05_认证失败_身份证号缺失_pt3.5_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_05_认证失败_身份证号缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_05_认证失败_身份证号缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_06_认证失败_uid为空_pt3.6_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_06_认证失败_uid为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_06_认证失败_uid为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_07_认证失败_真实姓名为空_pt3.7_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_07_认证失败_真实姓名为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_07_认证失败_真实姓名为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_08_认证失败_身份证号为空_pt3.8_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_08_认证失败_身份证号为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_08_认证失败_身份证号为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_09_认证失败_uid错误_pt3.9_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_09_认证失败_uid错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_09_认证失败_uid错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_10_认证失败_真实姓名为非中文_pt3.10_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_10_认证失败_真实姓名为非中文</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_10_认证失败_真实姓名为非中文</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_verify_user_auth_11_认证失败_真实姓名错误_ft3.11_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_11_认证失败_真实姓名错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_11_认证失败_真实姓名错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_CverifyUserAuth.py", line 83, in test_verify_user_auth<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_CverifyUserAuth.py", line 79, in test_verify_user_auth<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '0', 'retInfo': 'ok', 'Flstate': '无效'} != {'retCode': 0, 'retInfo': ok, 'Flstate': '有效'}<br />- {'Flstate': '无效', 'retCode': '0', 'retInfo': 'ok'}<br />?              ^               - -             -  -<br /><br />+ {'Flstate': '有效', 'retCode': 0, 'retInfo': ok}<br />?              ^<br /> : 用例[认证失败-真实姓名错误]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_12_认证失败_身份证号错误_pt3.12_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_12_认证失败_身份证号错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_12_认证失败_身份证号错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_13_认证失败_身份证号小于18位_pt3.13_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_13_认证失败_身份证号小于18位</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_13_认证失败_身份证号小于18位</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_14_认证失败_身份证号大于18位_pt3.14_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_14_认证失败_身份证号大于18位</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_14_认证失败_身份证号大于18位</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_15_认证成功_真实姓名正确_pt3.15_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_15_认证成功_真实姓名正确</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_15_认证成功_真实姓名正确</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_16_认证失败_身份证已经被认证_pt3.16_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_16_认证失败_身份证已经被认证</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_16_认证失败_身份证已经被认证</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_verify_user_auth_17_认证失败_uid未注册_pt3.17_3">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_verify_user_auth_17_认证失败_uid未注册</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_verify_user_auth_17_认证失败_uid未注册</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+2: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+        </ul>
+    </div>
+    
+    <li class="test displayed active has-leaf fail" status="fail" bdd="false" test-id="test_DbindBankCard.TestBindBankCard_4">
+    <div class='test-heading'>
+        <span class='test-name'>test_DbindBankCard.TestBindBankCard</span>
+        <span class='test-time'>desc: 绑定银行卡接口 </span>
+        <span class="test-status right fail">fail</span>
+    </div>
+    <div class='test-content hide'>
+        <div class='test-desc'>Pass: 23 ;
+                                Fail: 5 ;
+                                Error: 0 ;
+        </div>
+        <div class='test-attributes'>
+            <div class='category-list'>
+                <span class='category label white-text'>test_DbindBankCard.TestBindBankCard</span>
+            </div>
+        </div>
+        <ul class='collapsible node-list' data-collapsible='accordion'>
+            
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_01_获取验证码_pt4.1_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_01_获取验证码</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_01_获取验证码</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_02_帐号注册_pt4.2_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_02_帐号注册</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_02_帐号注册</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_03_实名认证_pt4.3_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_03_实名认证</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_03_实名认证</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_04_绑定失败_uid缺失_pt4.4_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_04_绑定失败_uid缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_04_绑定失败_uid缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_05_绑定失败_支付密码缺失_pt4.5_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_05_绑定失败_支付密码缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_05_绑定失败_支付密码缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_06_绑定失败_绑定的银行卡手机号缺失_pt4.6_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_06_绑定失败_绑定的银行卡手机号缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_06_绑定失败_绑定的银行卡手机号缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_07_绑定失败_证件ID缺失_pt4.7_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_07_绑定失败_证件ID缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_07_绑定失败_证件ID缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_08_绑定失败_持卡人姓名缺失_pt4.8_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_08_绑定失败_持卡人姓名缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_08_绑定失败_持卡人姓名缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_09_绑定失败_卡号缺失_pt4.9_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_09_绑定失败_卡号缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_09_绑定失败_卡号缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_10_绑定失败_银行卡类型缺失_pt4.10_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_10_绑定失败_银行卡类型缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_10_绑定失败_银行卡类型缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_bind_bank_card_11_绑定失败_银行名称缺失_ft4.11_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_11_绑定失败_银行名称缺失</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_11_绑定失败_银行名称缺失</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 76, in test_bind_bank_card<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 72, in test_bind_bank_card<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '19001', 'retInfo': '银行卡号检验错误'} != {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置}<br />- {'retCode': '19001', 'retInfo': '银行卡号检验错误'}<br />+ {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置} : 用例[绑定失败-银行名称缺失]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_12_绑定失败_uid为空_pt4.12_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_12_绑定失败_uid为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_12_绑定失败_uid为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_13_绑定失败_支付密码为空_pt4.13_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_13_绑定失败_支付密码为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_13_绑定失败_支付密码为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_14_绑定失败_绑定的银行卡手机号为空_pt4.14_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_14_绑定失败_绑定的银行卡手机号为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_14_绑定失败_绑定的银行卡手机号为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_15_绑定失败_证件ID为空_pt4.15_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_15_绑定失败_证件ID为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_15_绑定失败_证件ID为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_16_绑定失败_持卡人姓名为空_pt4.16_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_16_绑定失败_持卡人姓名为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_16_绑定失败_持卡人姓名为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_17_绑定失败_卡号为空_pt4.17_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_17_绑定失败_卡号为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_17_绑定失败_卡号为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_18_绑定失败_银行卡类型为空_pt4.18_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_18_绑定失败_银行卡类型为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_18_绑定失败_银行卡类型为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_bind_bank_card_19_绑定失败_银行名称为空_ft4.19_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_19_绑定失败_银行名称为空</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_19_绑定失败_银行名称为空</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 76, in test_bind_bank_card<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 72, in test_bind_bank_card<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '19001', 'retInfo': '银行卡号检验错误'} != {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置}<br />- {'retCode': '19001', 'retInfo': '银行卡号检验错误'}<br />+ {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置} : 用例[绑定失败-银行名称为空]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_20_绑定失败_银行卡号18位错误_pt4.20_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_20_绑定失败_银行卡号18位错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_20_绑定失败_银行卡号18位错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_bind_bank_card_21_绑定失败_银行名称错误_ft4.21_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_21_绑定失败_银行名称错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_21_绑定失败_银行名称错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 76, in test_bind_bank_card<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 72, in test_bind_bank_card<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '20042006', 'retInfo': '用户实名信息比对错误'} != {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置}<br />- {'retCode': '20042006', 'retInfo': '用户实名信息比对错误'}<br />+ {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置} : 用例[绑定失败-银行名称错误]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_22_绑定失败_证件ID与实名时身份证号不一致_pt4.22_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_22_绑定失败_证件ID与实名时身份证号不一致</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_22_绑定失败_证件ID与实名时身份证号不一致</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_23_绑定失败_银行卡手机号非11位_pt4.23_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_23_绑定失败_银行卡手机号非11位</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_23_绑定失败_银行卡手机号非11位</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_24_绑定失败_持卡人姓名错误_pt4.24_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_24_绑定失败_持卡人姓名错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_24_绑定失败_持卡人姓名错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_25_绑定失败_银行卡号格式错误_大于18位__pt4.25_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_25_绑定失败_银行卡号格式错误_大于18位_</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_25_绑定失败_银行卡号格式错误_大于18位_</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_bind_bank_card_26_绑定失败_银行类型错误_ft4.26_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_26_绑定失败_银行类型错误</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_26_绑定失败_银行类型错误</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 76, in test_bind_bank_card<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 72, in test_bind_bank_card<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '20042006', 'retInfo': '用户实名信息比对错误'} != {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置}<br />- {'retCode': '20042006', 'retInfo': '用户实名信息比对错误'}<br />+ {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置} : 用例[绑定失败-银行类型错误]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf fail" status="fail" test-id="test_bind_bank_card_27_绑定成功_所有参数正确_ft4.27_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_27_绑定成功_所有参数正确</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right fail">fail</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_27_绑定成功_所有参数正确</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: Traceback (most recent call last):<br />  File "D:\AuditApiAutoTest\libs\ddt.py", line 165, in wrapper<br />    return func(self, *args, **kwargs)<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 76, in test_bind_bank_card<br />    raise e<br />  File "D:\AuditApiAutoTest\cases\test_DbindBankCard.py", line 72, in test_bind_bank_card<br />    self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))<br />AssertionError: {'retCode': '0', 'retInfo': 'ok'} != {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置}<br />- {'retCode': '0', 'retInfo': 'ok'}<br />+ {'retCode': 20042018, 'retInfo': 用户交易密码不正确或未配置} : 用例[绑定成功-所有参数正确]测试失败<br />
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+            <li class="node level-1 leaf pass" status="pass" test-id="test_bind_bank_card_28_绑定失败_uid未认证_pt4.28_4">
+            <div class='collapsible-header'>
+                <div class='node-name'>test_bind_bank_card_28_绑定失败_uid未认证</div>
+                <span class='node-time'>desc: </span>
+                <span class="test-status right pass">pass</span>
+            </div>
+            <div class='collapsible-body'>
+                <div class='category-list right'>
+                    <span class='category label white-text'>test_bind_bank_card_28_绑定失败_uid未认证</span>
+                </div>
+                <div class='node-steps'>
+                    <table class='bordered table-results'>
+                        <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Identity</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>stdo</td>
+            <td style="white-space:pre-wrap;word-break:break-all">
+3: 
+</td>
+        </tr>
+        <tr class='info' status='info'>
+            <td class='status info' title='info' alt='info'><i
+                    class='material-icons'>low_priority</i></td>
+            <td class='timestamp'>screenshot</td>
+            <td class='step-details'>
+            </td>
+        </tr>
+    
+                        </tbody>
+                    </table>
+                 </div>
+             </div>
+            </li>
+    
+        </ul>
+    </div>
+    
+                </ul>
+            </div>
+    </div>            
+    
+        
+        <div class='subview-right left'>
+            <div class='view-summary'>
+                <h5 class='test-name'></h5>
+
+                <div id='step-filters' class="right">
+                    <span class="blue-text" status="info" alt="info" title="info"><i
+                            class="material-icons">info_outline</i></span>
+                    <span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+                    <span class="red-text" status="fail" alt="fail" title="fail"><i
+                            class="material-icons">cancel</i></span>
+                    <span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i
+                            class="material-icons">cancel</i></span>
+                    <span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i
+                            class="material-icons">error</i></span>
+                    <span class="orange-text" alt="warning" status="warning" title="warning"><i
+                            class="material-icons">warning</i></span>
+                    <span class="teal-text" status="skip" alt="skip" title="skip"><i
+                            class="material-icons">redo</i></span>
+                    <span status="clear" alt="Clear filters" title="Clear filters"><i
+                            class="material-icons">clear</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id='category-view' class='view hide'>
+        <section id='controls'>
+            <div class='controls grey lighten-4'>
+                <!-- search -->
+                <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                    <a href="#" class='search-div'>
+                        <i class='material-icons'>search</i> Search
+                    </a>
+    
+                    <div class='input-field left hide'>
+                        <input tyle="color: red;" id='search-tests' type='text'
+                               class='validate browser-default'
+                               placeholder='Search Tests...'>
+                    </div>
+    
+                </div>
+                <!-- search -->
+            </div>
+        </section>
+        
+        <div class='subview-left left'>
+
+            <div class='view-summary'>
+                <h5>Categories</h5>
+                <ul id='category-collection' class='category-collection'>
+
+                    <li class='category displayed active'>
+                        <div class='category-heading'>
+                            <span class='category-name'>All Suites</span>
+                            <span class='category-status right'>
+                                <span class='label pass'>66 </span>
+                                <span class='label fail'>8</span>
+                            </span>
+                        </div>
+                        <div class='category-content hide'>
+                            <div class='category-status-counts'>
+                                <span class='label green accent-4 white-text'>Passed: 66</span>
+                                <span class='label red lighten-1 white-text'>Failed: 8</span>
+                                <span class='label blue lighten-1 white-text'>Errored: 0</span>
+                                <span class="label yellow darken-2 white-text">Skipped: </span>
+                            </div>
+
+                            <div class='category-tests'>
+                                <table class='bordered table-results'>
+                                    <thead>
+                                    <tr>
+                                        <th>Timestamp</th>
+                                        <th>TestName</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    ['\n    <tr style="border: 1px solid #49cc90; background-color: rgba(73, 204, 144, .1)">\n        <td>2019-06-17 22:42:12.746169</td>\n        <td class=\'linked\' test-id=\'test_AsendCode.TestSendCodeApi_0\'>test_AsendCode.TestSendCodeApi</td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n    <tr>\n        <td></td>\n        <td class=\'linked\' test-id=\'暂未处理\'></td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n        \n    ', '\n    <tr style="border: 1px solid #49cc90; background-color: rgba(73, 204, 144, .1)">\n        <td>2019-06-17 22:42:12.746169</td>\n        <td class=\'linked\' test-id=\'test_BuserRegister.TestUserRegisterApi_1\'>test_BuserRegister.TestUserRegisterApi</td>\n        <td><span class="test-status pass">pass</span></td>\n    </tr>\n    <tr>\n        <td></td>\n        <td class=\'linked\' test-id=\'暂未处理\'></td>\n        <td><span class="test-status pass">pass</span></td>\n    </tr>\n        \n    ', '\n    <tr style="border: 1px solid #49cc90; background-color: rgba(73, 204, 144, .1)">\n        <td>2019-06-17 22:42:12.746169</td>\n        <td class=\'linked\' test-id=\'test_CverifyUserAuth.TestVerifyUserAuth_2\'>test_CverifyUserAuth.TestVerifyUserAuth</td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n    <tr>\n        <td></td>\n        <td class=\'linked\' test-id=\'暂未处理\'></td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n        \n    ', '\n    <tr style="border: 1px solid #49cc90; background-color: rgba(73, 204, 144, .1)">\n        <td>2019-06-17 22:42:12.746169</td>\n        <td class=\'linked\' test-id=\'test_DbindBankCard.TestBindBankCard_3\'>test_DbindBankCard.TestBindBankCard</td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n    <tr>\n        <td></td>\n        <td class=\'linked\' test-id=\'暂未处理\'></td>\n        <td><span class="test-status fail">fail</span></td>\n    </tr>\n        \n    ']
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    ["\n    <li class='category displayed active'>\n        <div class='category-heading'>\n            <span class='category-name'>test_AsendCode.TestSendCodeApi</span>\n            <span class='category-status right'>\n                <span class='label pass'>10 </span>\n                <span class='label fail'>2</span>\n            </span>\n        </div>\n        <div class='category-content hide'>\n            <div class='category-status-counts'>\n                <span class='label green accent-4 white-text'>Passed: 10</span>\n                <span class='label red lighten-1 white-text'>Failed: 2</span>\n                <span class='label blue lighten-1 white-text'>Errored: 0</span>\n            </div>\n\n            <div class='category-tests'>\n                <table class='bordered table-results'>\n                    <thead>\n                    <tr>\n                        <th>Timestamp</th>\n                        <th>TestName</th>\n                        <th>Status</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </li>\n    ", "\n    <li class='category displayed active'>\n        <div class='category-heading'>\n            <span class='category-name'>test_BuserRegister.TestUserRegisterApi</span>\n            <span class='category-status right'>\n                <span class='label pass'>17 </span>\n                <span class='label fail'>0</span>\n            </span>\n        </div>\n        <div class='category-content hide'>\n            <div class='category-status-counts'>\n                <span class='label green accent-4 white-text'>Passed: 17</span>\n                <span class='label red lighten-1 white-text'>Failed: 0</span>\n                <span class='label blue lighten-1 white-text'>Errored: 0</span>\n            </div>\n\n            <div class='category-tests'>\n                <table class='bordered table-results'>\n                    <thead>\n                    <tr>\n                        <th>Timestamp</th>\n                        <th>TestName</th>\n                        <th>Status</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </li>\n    ", "\n    <li class='category displayed active'>\n        <div class='category-heading'>\n            <span class='category-name'>test_CverifyUserAuth.TestVerifyUserAuth</span>\n            <span class='category-status right'>\n                <span class='label pass'>16 </span>\n                <span class='label fail'>1</span>\n            </span>\n        </div>\n        <div class='category-content hide'>\n            <div class='category-status-counts'>\n                <span class='label green accent-4 white-text'>Passed: 16</span>\n                <span class='label red lighten-1 white-text'>Failed: 1</span>\n                <span class='label blue lighten-1 white-text'>Errored: 0</span>\n            </div>\n\n            <div class='category-tests'>\n                <table class='bordered table-results'>\n                    <thead>\n                    <tr>\n                        <th>Timestamp</th>\n                        <th>TestName</th>\n                        <th>Status</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </li>\n    ", "\n    <li class='category displayed active'>\n        <div class='category-heading'>\n            <span class='category-name'>test_DbindBankCard.TestBindBankCard</span>\n            <span class='category-status right'>\n                <span class='label pass'>23 </span>\n                <span class='label fail'>5</span>\n            </span>\n        </div>\n        <div class='category-content hide'>\n            <div class='category-status-counts'>\n                <span class='label green accent-4 white-text'>Passed: 23</span>\n                <span class='label red lighten-1 white-text'>Failed: 5</span>\n                <span class='label blue lighten-1 white-text'>Errored: 0</span>\n            </div>\n\n            <div class='category-tests'>\n                <table class='bordered table-results'>\n                    <thead>\n                    <tr>\n                        <th>Timestamp</th>\n                        <th>TestName</th>\n                        <th>Status</th>\n                    </tr>\n                    </thead>\n                    <tbody>\n                    \n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </li>\n    "]
+                <div class='subview-right left'>
+            <div class='view-summary'>
+                <h5 class='category-name'></h5>
+            </div>
+        </div>
+    </div>
+                    
+        
+    
+    
+
+    
+    <div id='dashboard-view' class='view hide'>
+        <div class='card-panel transparent np-v'>
+            <h5>Dashboard</h5>
+
+            <div class='row'>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Pass
+                        <div class='panel-lead'>66</div>
+                    </div>
+                </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Fail
+                        <div class='panel-lead'>8</div>
+                    </div>
+                </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Error
+                        <div class='panel-lead'>0</div>
+                    </div>
+                </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Skip
+                        <div class='panel-lead'></div>
+                    </div>
+                </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Start
+                        <div class='panel-lead'>2019-06-17 22:42:12</div>
+                    </div>
+                </div>
+                <div class='col s2'>
+                    <div class='card-panel r'>
+                        Time Taken
+                        <div class='panel-lead'>0:00:30.017717 seconds</div>
+                    </div>
+                </div>
+                <div class='col s4'>
+                    <div class='card-panel'>
+                        <span class='right label cyan white-text'>Categories</span>
+                        <p>&nbsp;</p>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Passed</th>
+                                <th>Failed</th>
+                                <th>Errored</th>
+                                <th>Skipped</th>
+                            </tr>
+                            <tr>
+                                <td>All Suites</td>
+                                <td class="pass">66</td>
+                                <td class="fail">8</td>
+                                <td class="error">0</td>
+                                <td class="skip"></td>
+                            </tr>
+
+                                <tr>
+                                    <td id="unknown"></td>
+                                    <td class="pass"></td>
+                                    <td class="fail"></td>
+                                    <td class="error"></td>
+                                    <td class="skip"></td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+    
+</body>
+
+    <script>
+        var test_suite_success = 66;
+        
+    
+        var statusGroup = {
+            passParent: 66,
+            failParent: 8,
+            fatalParent: 0,
+            errorParent: 0,
+            warningParent: 0,
+            skipParent: 0,
+            exceptionsParent: 0,
+    
+            passChild: test_suite_success,
+            failChild: 8,
+            fatalChild: 0,
+            errorChild: 0,
+            warningChild: 0,
+            skipChild: 0,
+            infoChild: 0,
+            exceptionsChild: 0,
+    
+            passGrandChild: 0,
+            failGrandChild: 0,
+            fatalGrandChild: 0,
+            errorGrandChild: 0,
+            warningGrandChild: 0,
+            skipGrandChild: 0,
+            infoGrandChild: 0,
+            exceptionsGrandChild: 0,
+        };
+    
+    </script>
+    
+    <script src='http://extentreports.com/resx/dist/js/extent.js' type='text/javascript'></script>
+    
+    
+    <script type='text/javascript'>
+        $(window).off("keydown");
+    </script>
+    
+</html>
