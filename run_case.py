@@ -13,6 +13,7 @@ from libs import (HTMLTestRunner, ExtentHTMLTestRunner)
 from config.config import (ENVIRONMENT, REPORT_DIR, LOG_DIR, CASE_DIR)
 from common.CreatePath import ModelsClass
 from common.ParseConfig import do_config
+from common.SendEmail import SendMailWithReport
 
 
 def tc_suite():
@@ -29,14 +30,22 @@ if __name__ == '__main__':
     ModelsClass.create_dir(LOG_DIR)
     report_dir = ModelsClass.create_dir(REPORT_DIR)
     report_file_name = ModelsClass.file_name('html')
+    report_path = report_dir + '/' + report_file_name
     # 第一种测试报告
-    with open(report_dir + '/' + report_file_name, 'wb') as f:
+    with open(report_path, 'wb') as f:
         runner = HTMLTestRunner.HTMLTestReportCN(stream=f,
                                                  description=ENVIRONMENT,
                                                  title=do_config('Project', 'Name'),
                                                  tester=do_config('Project', 'Tester'),
                                                  verbosity=2)
         runner.run(tc_suite())
+        SendMailWithReport.send_mail(do_config("Email_Config", "server"),
+                                     do_config("Email_Config", "from_user"),
+                                     do_config("Email_Config", "from_user_password"),
+                                     do_config("Email_Config", "to_user", is_eval=True),
+                                     do_config("Email_Config", "subject"),
+                                     do_config("Email_Config", "context"),
+                                     report_path)
     # 第二种测试报告
     # with open(report_dir + '/' + report_file_name, 'wb') as f:
     #     runner = ExtentHTMLTestRunner.HTMLTestRunner(stream=f,

@@ -23,7 +23,7 @@ from common.RecordLog import logger
 @ddt
 class TestUserRegisterApi(unittest.TestCase):
     """用户注册接口"""
-    values = do_excel.get_all_values('userRegister')
+    values = do_excel.get_all_values(do_config("Excel", "userRegisterApi"))
 
     @classmethod
     def setUpClass(cls):
@@ -66,14 +66,25 @@ class TestUserRegisterApi(unittest.TestCase):
         actual_str = str(actual_dict)
         try:
             logger.info("测试用例执行实际结果为:[{}]".format(actual_str))
-            do_excel.write_cell('userRegister', case_id + 1, 8, actual_str)
+            do_excel.write_cell(do_config("Excel", "userRegisterApi"),
+                                case_id + 1,
+                                do_config("Excel", "actual_column"),
+                                actual_str)
             self.assertEqual(case_expected, actual_dict, msg='用例[{}]测试失败'.format(case_title))
         except AssertionError as e:
-            do_excel.write_cell('userRegister', case_id+1, 9, 'Fail', color='red')
+            do_excel.write_cell(do_config("Excel", "userRegisterApi"),
+                                case_id+1,
+                                do_config("Excel", "result_column"),
+                                'Fail',
+                                color='red')
             logger.error("测试用例[{}]执行结果:{}\n具体原因信息:{}".format(case_title, "Fail", e))
             raise e
         else:
-            do_excel.write_cell('userRegister', case_id+1, 9, 'Pass', color='green')
+            do_excel.write_cell(do_config("Excel", "userRegisterApi"),
+                                case_id+1,
+                                do_config("Excel", "result_column"),
+                                'Pass',
+                                color='green')
             logger.error("测试用例[{}]执行结果:{}".format(case_title, "Pass"))
 
     def tearDown(self):

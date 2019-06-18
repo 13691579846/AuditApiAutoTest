@@ -10,21 +10,22 @@
 import re
 from common.CreateTestData import CreateData
 from common.RecordLog import logger
+from common.ParseConfig import do_config
+
 
 
 class DataReplace(object):
 
     logger.info("<---开始参数化测试数据--->")
     """正则表达式"""
-    pattern_unregistered_phone = re.compile(r'\$\{verify_phone\}')
-    pattern_verify_unregistered_phone = re.compile(r'\$\{verify_unregistered_phone\}')
-    pattern_verify_code = re.compile(r'\$\{verify_code\}')
-    pattern_user_id = re.compile(r'\$\{user_id\}')
-    pattern_registered_uid = re.compile(r'\$\{registered_uid\}')
-    pattern_true_name = re.compile(r'\$\{true_name\}')
-
-    pattern_trued_uid = re.compile(r'\$\{trued_uid\}')
-    pattern_untrue_register_uid = re.compile(r'\$\{untrue_register_uid\}')
+    pattern_unregistered_phone = re.compile(do_config("Re_parameters", "verify_phone"))
+    pattern_verify_unregistered_phone = re.compile(do_config("Re_parameters", "verify_unregistered_phone"))
+    pattern_verify_code = re.compile(do_config("Re_parameters", "verify_code"))
+    pattern_user_id = re.compile(do_config("Re_parameters", "user_id"))
+    pattern_registered_uid = re.compile(do_config("Re_parameters", "registered_uid"))
+    pattern_true_name = re.compile(do_config("Re_parameters", "true_name"))
+    pattern_trued_uid = re.compile(do_config("Re_parameters", "trued_uid"))
+    pattern_untrue_register_uid = re.compile(do_config("Re_parameters", "untrue_register_uid"))
 
     def __init__(self):
         pass
