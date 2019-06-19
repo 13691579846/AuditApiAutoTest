@@ -8,10 +8,10 @@
 ------------------------------------
 """
 import re
+
 from common.CreateTestData import CreateData
 from common.RecordLog import logger
 from common.ParseConfig import do_config
-
 
 
 class DataReplace(object):
