@@ -46,7 +46,7 @@ if __name__ == '__main__':
                                      do_config("Email_Config", "subject"),
                                      do_config("Email_Config", "context"),
                                      report_path)
-    # 第二种测试报告
+    # 第二种测试报告1
     # with open(report_dir + '/' + report_file_name, 'wb') as f:
     #     runner = ExtentHTMLTestRunner.HTMLTestRunner(stream=f,
     #                                                  description=ENVIRONMENT,
