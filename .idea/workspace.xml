@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/testJenkins.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="23" selection-start-column="23" selection-end-column="23" />
+              <caret column="31" selection-start-column="31" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -466,7 +466,7 @@
       <workItem from="1560737784825" duration="23049000" />
       <workItem from="1560842992324" duration="2834000" />
       <workItem from="1561120816706" duration="637000" />
-      <workItem from="1561121755132" duration="898000" />
+      <workItem from="1561121755132" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="add test case">
       <created>1560481865211</created>
@@ -587,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561124290462</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="test jenkins with github">
+      <created>1561124463349</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1561124463349</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -599,7 +606,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152283000" />
+    <option name="totallyTimeSpent" value="152767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -903,7 +910,7 @@
     <entry file="file://$PROJECT_DIR$/testJenkins.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
