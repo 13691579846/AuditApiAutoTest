@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73a5bc3d-8f27-46fa-90bc-0fb6d2b23f32" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AuditApiAutoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AuditApiAutoTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testJenkins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testJenkins.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,25 +13,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$CreateTestData.coverage" NAME="CreateTestData Coverage Results" MODIFIED="1560517449559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$pytest_in_test_sendCode_py.coverage" NAME="pytest in test_sendCode.py Coverage Results" MODIFIED="1560527769674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$config.coverage" NAME="config Coverage Results" MODIFIED="1560389630151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$DataReplace.coverage" NAME="DataReplace Coverage Results" MODIFIED="1560398894462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_3_verifyUserAuth.coverage" NAME="test_3_verifyUserAuth Coverage Results" MODIFIED="1560693074350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_sendCode.coverage" NAME="test_sendCode Coverage Results" MODIFIED="1560569372179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test.coverage" NAME="test Coverage Results" MODIFIED="1560520784509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$ParseExcel.coverage" NAME="ParseExcel Coverage Results" MODIFIED="1560414737521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_SendCode.coverage" NAME="test_SendCode Coverage Results" MODIFIED="1560508583108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_1_sendCode.coverage" NAME="test_1_sendCode Coverage Results" MODIFIED="1560693223680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$HandleMysql.coverage" NAME="HandleMysql Coverage Results" MODIFIED="1560605690067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$WebService.coverage" NAME="WebService Coverage Results" MODIFIED="1560694124017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_4_bindBankCard.coverage" NAME="test_4_bindBankCard Coverage Results" MODIFIED="1560695511332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$ParseConfig.coverage" NAME="ParseConfig Coverage Results" MODIFIED="1560389763978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_2_userRegister.coverage" NAME="test_2_userRegister Coverage Results" MODIFIED="1560693258763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$RecordLog.coverage" NAME="RecordLog Coverage Results" MODIFIED="1560398036735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_verifyUserAuth.coverage" NAME="test_verifyUserAuth Coverage Results" MODIFIED="1560615473533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
     <SUITE FILE_PATH="coverage/AuditApiAutoTest$run_case.coverage" NAME="run_case Coverage Results" MODIFIED="1560825093472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$config.coverage" NAME="config Coverage Results" MODIFIED="1560389630151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_sendCode.coverage" NAME="test_sendCode Coverage Results" MODIFIED="1560569372179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$ParseConfig.coverage" NAME="ParseConfig Coverage Results" MODIFIED="1560389763978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$SendEmail.coverage" NAME="SendEmail Coverage Results" MODIFIED="1561371451737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$pytest_in_test_sendCode_py.coverage" NAME="pytest in test_sendCode.py Coverage Results" MODIFIED="1560527769674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_verifyUserAuth.coverage" NAME="test_verifyUserAuth Coverage Results" MODIFIED="1560615473533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$CreateTestData.coverage" NAME="CreateTestData Coverage Results" MODIFIED="1560517449559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_1_sendCode.coverage" NAME="test_1_sendCode Coverage Results" MODIFIED="1560693223680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test.coverage" NAME="test Coverage Results" MODIFIED="1560520784509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$WebService.coverage" NAME="WebService Coverage Results" MODIFIED="1560694124017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$DataReplace.coverage" NAME="DataReplace Coverage Results" MODIFIED="1560398894462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_2_userRegister.coverage" NAME="test_2_userRegister Coverage Results" MODIFIED="1560693258763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_4_bindBankCard.coverage" NAME="test_4_bindBankCard Coverage Results" MODIFIED="1560695511332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$sendemail.coverage" NAME="sendemail Coverage Results" MODIFIED="1561375042349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_3_verifyUserAuth.coverage" NAME="test_3_verifyUserAuth Coverage Results" MODIFIED="1560693074350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$RecordLog.coverage" NAME="RecordLog Coverage Results" MODIFIED="1560398036735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
     <SUITE FILE_PATH="coverage/AuditApiAutoTest$test_userRegister.coverage" NAME="test_userRegister Coverage Results" MODIFIED="1560586748806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cases" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$ParseExcel.coverage" NAME="ParseExcel Coverage Results" MODIFIED="1560414737521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/AuditApiAutoTest$HandleMysql.coverage" NAME="HandleMysql Coverage Results" MODIFIED="1560605690067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -54,10 +57,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testJenkins.txt">
+        <entry file="file://$PROJECT_DIR$/common/SendEmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="31" selection-start-column="31" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="37" column="50" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -108,17 +111,18 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/common/DataReplace.py" />
         <option value="$PROJECT_DIR$/common/HandleJson.py" />
-        <option value="$PROJECT_DIR$/common/SendEmail.py" />
         <option value="$PROJECT_DIR$/run_case.py" />
         <option value="$PROJECT_DIR$/testJenkins.txt" />
+        <option value="$PROJECT_DIR$/common/SendEmail.py" />
+        <option value="$PROJECT_DIR$/sendemail.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="754" />
+    <option name="x" value="330" />
+    <option name="y" value="53" />
+    <option name="width" value="954" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -179,7 +183,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PytestAutoTestFrameWork" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -203,29 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_case">
-    <configuration name="CreateTestData" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="AuditApiAutoTest" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/CreateTestData.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.sendemail">
     <configuration name="HandleMysql" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AuditApiAutoTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,6 +222,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/HandleMysql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SendEmail" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AuditApiAutoTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/SendEmail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,7 +296,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sendemail" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AuditApiAutoTest" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -305,7 +309,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sendemail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -431,18 +435,18 @@
       <item itemvalue="Python.test_1_sendCode" />
       <item itemvalue="Python.test_4_bindBankCard" />
       <item itemvalue="Python.WebService" />
-      <item itemvalue="Python.CreateTestData" />
       <item itemvalue="Python.run_case" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.HandleMysql" />
+      <item itemvalue="Python.SendEmail" />
+      <item itemvalue="Python.sendemail" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sendemail" />
+        <item itemvalue="Python.SendEmail" />
         <item itemvalue="Python.run_case" />
         <item itemvalue="Python.WebService" />
         <item itemvalue="Python.HandleMysql" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.CreateTestData" />
       </list>
     </recent_temporary>
   </component>
@@ -467,6 +471,7 @@
       <workItem from="1560842992324" duration="2834000" />
       <workItem from="1561120816706" duration="637000" />
       <workItem from="1561121755132" duration="1382000" />
+      <workItem from="1561370450153" duration="4966000" />
     </task>
     <task id="LOCAL-00001" summary="add test case">
       <created>1560481865211</created>
@@ -594,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561124463349</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="modify code">
+      <created>1561375470217</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561375470217</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -606,7 +618,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152767000" />
+    <option name="totallyTimeSpent" value="157733000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,15 +630,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19452888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20272315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5516129" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12077295" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5925926" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -655,9 +666,9 @@
     <MESSAGE value="add log" />
     <MESSAGE value="version 1.1 add send mail for html report" />
     <MESSAGE value="modify readme file" />
-    <MESSAGE value="modify code" />
     <MESSAGE value="test jenkins with github" />
-    <option name="LAST_COMMIT_MESSAGE" value="test jenkins with github" />
+    <MESSAGE value="modify code" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify code" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -687,28 +698,10 @@
     <entry file="file://$PROJECT_DIR$/cases/test_case_3.py" />
     <entry file="file://$PROJECT_DIR$/cases/test_case_4.py" />
     <entry file="file://$PROJECT_DIR$/common/file.log" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b0fa7840-5d01-4e08-8089-15d5df9fb54e/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b0fa7840-5d01-4e08-8089-15d5df9fb54e/console.sql" />
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://C:/Python36/Lib/site-packages/suds/reader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python36/Lib/site-packages/suds/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-666">
-          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/suds/reader.py" />
+    <entry file="file://C:/Python36/Lib/site-packages/suds/client.py" />
     <entry file="file://$PROJECT_DIR$/base/base.py" />
     <entry file="file://$PROJECT_DIR$/libs/HTMLTestRunnerNew.py" />
     <entry file="file://$PROJECT_DIR$/log/2019-06-17testing.log">
@@ -718,18 +711,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python36/Lib/site-packages/yagmail/sender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="148" column="82" selection-start-line="148" selection-start-column="66" selection-end-line="148" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/2019-06-18testing.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-35960" />
-      </provider>
-    </entry>
+    <entry file="file://C:/Python36/Lib/site-packages/yagmail/sender.py" />
+    <entry file="file://$PROJECT_DIR$/log/2019-06-18testing.log" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -827,16 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/SendEmail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#243#257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/WebService.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1206">
@@ -907,10 +880,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testJenkins.txt">
+    <entry file="file://$PROJECT_DIR$/testJenkins.txt" />
+    <entry file="file://$PROJECT_DIR$/sendemail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        <state relative-caret-position="358">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#61#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/SendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
