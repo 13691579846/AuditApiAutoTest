@@ -31,10 +31,13 @@ class SendMailWithReport(object):
 
 
 if __name__ == '__main__':
+    f = open(r'D:\AuditApiAutoTest\report\2019-06-18-10-31-34.html', encoding='utf-8')
+    contest = f.read()
     SendMailWithReport.send_mail('smtp.qq.com',
                                  '281754043@qq.com',
                                  '********',
                                  '281754043@qq.com',
                                  'python自动化测试',
-                                 '邮件正文',
-                                 '17_12_07.html')
+                                 contents=contest,
+                                 file_name=r'D:\AuditApiAutoTest\report\2019-06-18-10-31-34.html')
+    f.close()
