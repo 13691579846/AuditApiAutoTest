@@ -33,7 +33,7 @@ class SendMailWithReport(object):
 if __name__ == '__main__':
     SendMailWithReport.send_mail('smtp.qq.com',
                                  '281754043@qq.com',
-                                 'ywjqtmrwqfuqbhdi',
+                                 '********',
                                  '281754043@qq.com',
                                  'python自动化测试',
                                  '邮件正文',
